@@ -45,28 +45,28 @@
 
 
 	<div class="container">
-		<form>
+		<form data-bind="submit: doSomething">
 			<div class="">
 				<div class="form-group col-lg-3 col-md-3">
 					<label for="firstName">First Name</lable>
-					<input type="name" class="form-control" id="firstName" placeholder="Enter First Name">
+					<input type="name" class="form-control" id="firstName" data-bind="value: theFirstName" placeholder="Enter First Name">
 				</div>
 
 				<div class="form-group col-lg-3 col-md-3">
 					<label for="lastName">Last Name</lable>
-					<input type="name" class="form-control" id="lastName" placeholder="Enter Last Name">
+					<input type="name" class="form-control" id="lastName" data-bind="value: theLastName" placeholder="Enter Last Name">
 				</div>
 			</div>
 
 			<div class="">
 				<div class="form-group col-lg-3 col-md-3">
 					<label for="InputEmail">Email Address</lable>
-					<input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+					<input type="email" class="form-control" id="InputEmail" data-bind="value: theEmail" aria-describedby="emailHelp" placeholder="Enter Email">
 				</div>
 
 				<div class="form-group col-lg-3 col-md-3">
 					<label for="Age">Age</lable>
-					<input type="age" class="form-control" id="Age" placeholder="Enter Your Age">
+					<input type="age" class="form-control" id="Age" data-bind="value: theAge" placeholder="Enter Your Age">
 				</div>
 
 			</div>
@@ -74,7 +74,7 @@
 			<div class="">
 				<div class="form-group col-lg-3 col-md-3">
 					<label for="gender">Gender</label>
-					<select id="gender" class="form-control">
+					<select id="gender" class="form-control" data-bind="value: theGender" >
 						<option selected>Male</option>
 						<option>Female</option>
 						<option>Other</option>
@@ -82,21 +82,35 @@
 				</div>
 
 				<div class="form-group form-check ">
-					<input type="checkbox" class="form-check-input" id="checkbox">
+					<input type="checkbox" class="form-check-input" id="checkbox" data-bind="value: theCheckbox" >
 					<label class="form-check-label" for="checkbox">Do you like Checkboxes?</label>
 				</div>
 			</div>
+			<button class="btn btn-primary" type="submit">Submit</button>
 		</form>
-
-		<button class="btn btn-primary" type="button">Submit</button>
-
 	</div>
 
+<label id="jsonDisplay"></label>
 
 
 
 	<script>
-		var myvar = 4;
+		var viewModel = {
+			theFirstName : ko.observable(),
+			theLastName  : ko.observable(),
+			theEmail     : ko.observable(),
+			theAge       : ko.observable(),
+			theGender    : ko.observable(),
+			theCheckbox  : ko.observable(),
+			json         : ko.observable(),
+			doSomething : function(){
+				var jsonData = ko.toJSON(viewModel);
+				json = jsonData;
+				document.getElementById('jsonDispaly').innerHTML = json;
+			}
+		};
+
+
 	</script>
 
 	<script src=js/knockout.js></script>
