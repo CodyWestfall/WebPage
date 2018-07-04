@@ -1,19 +1,97 @@
 <!DOCTYPE html>
 <html>
+
+ <!-- This is the head area -->
 	<head>
 		<title>Cody's Page!</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	</head>
 
 
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-			<a class="navbar-brand" href-"#">Navbar</a>
 
-		</nav>
+			<!-- Navbar -->
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+					<div class="container">
+
+						<a class="navbar-brand" href="#">Cody Westfall</a>
+
+						<div class="collapse navbar-collapse" id="navbarText">
+					    <ul class="navbar-nav mr-auto">
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					      </li>
+								<!--
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Features</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Pricing</a>
+					      </li>
+							-->
+					    </ul>
+					  </div>
+					</div>
+			</nav>
+
+
+
+	<div class="container">
+		<h1 class="text-center text-primary">Welcome to the page!</h1>
+  </div>
+
+
+	<div class="container">
+		<form>
+			<div class="">
+				<div class="form-group col-lg-3 col-md-3">
+					<label for="firstName">First Name</lable>
+					<input type="name" class="form-control" id="firstName" placeholder="Enter First Name">
+				</div>
+
+				<div class="form-group col-lg-3 col-md-3">
+					<label for="lastName">Last Name</lable>
+					<input type="name" class="form-control" id="lastName" placeholder="Enter Last Name">
+				</div>
+			</div>
+
+			<div class="">
+				<div class="form-group col-lg-3 col-md-3">
+					<label for="InputEmail">Email Address</lable>
+					<input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+				</div>
+
+				<div class="form-group col-lg-3 col-md-3">
+					<label for="Age">Age</lable>
+					<input type="age" class="form-control" id="Age" placeholder="Enter Your Age">
+				</div>
+
+			</div>
+
+			<div class="">
+				<div class="form-group col-lg-3 col-md-3">
+					<label for="gender">Gender</label>
+					<select id="gender" class="form-control">
+						<option selected>Male</option>
+						<option>Female</option>
+						<option>Other</option>
+					</select>
+				</div>
+
+				<div class="form-group form-check ">
+					<input type="checkbox" class="form-check-input" id="checkbox">
+					<label class="form-check-label" for="checkbox">Do you like Checkboxes?</label>
+				</div>
+			</div>
+		</form>
+
+		<button class="btn btn-primary" type="button">Submit</button>
+
+	</div>
+
 
 
 
@@ -21,13 +99,9 @@
 		var myvar = 4;
 	</script>
 
-	<h1>Welcome to the page!</h1>
-
-    	<button type="button" class="btn btn-primary">First Button</button>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src=js/knockout.js></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
-	    
   </body>
 </html>
-
